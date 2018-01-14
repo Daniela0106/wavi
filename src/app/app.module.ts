@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import {UIRouterModule} from "@uirouter/angular";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -36,4 +36,24 @@ let profilesState = { name: 'profiles', url: '/profiles',  component: ProfilesCo
   providers: [ ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule{
+
+
+
+  // function searchVideos(){
+  //
+  //   let vimeoConfig = {
+  //     'API_HOST': 'https://api.vimeo.com/',
+  //     'ACCESS_TOKEN': 'effa86d0284056eacb391c194926a789',
+  //     'PER_PAGE' : 12,
+  //     'SORT_DIRECTION' : 'asc',
+  //     'MAX_PAGINATOR_SIZE' : 3,
+  //     'FIRST_PART_URL' : 'https://i.vimeocdn.com/'
+  //   };
+  //
+  //   this.httpClient.get({
+  //     url: vimeoConfig.API_HOST + 'categories/' + 'sports' + '/videos?per_page=12',
+  //     headers: {Authorization: 'Bearer ' + vimeoConfig.ACCESS_TOKEN}
+  //   });
+  // }
+}
