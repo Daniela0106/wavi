@@ -11,6 +11,7 @@ import { FooterComponent } from '../app/shared/footer/footer.component';
 import { NavBarComponent } from '../app/shared/navbar/nav-bar.component';
 
 import { VideosService } from '../app/core/categories/videos.service';
+import { CategoriesService } from '../app/core/videos/categories.service';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,7 +37,7 @@ let profilesState = { name: 'profiles', url: '/profiles',  component: ProfilesCo
       }
     })
   ],
-  providers: [ VideosService ],
+  providers: [ VideosService, CategoriesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule{

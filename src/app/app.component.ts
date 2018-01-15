@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CategoriesService } from '../app/core/videos/categories.service';
 import { VideosService } from '../app/core/categories/videos.service';
 
 
@@ -11,7 +12,7 @@ import { VideosService } from '../app/core/categories/videos.service';
 export class AppComponent implements OnInit{
   title = 'Wavi';
 
-  constructor(private http: HttpClient, private videosService: VideosService){
+  constructor(private http: HttpClient, private videosService: VideosService, private categoriesService: CategoriesService){
   }
 
 
@@ -41,10 +42,14 @@ export class AppComponent implements OnInit{
 
   ngOnInit (){
     this.getVideos();
+    this.getCategories();
   }
-
 
   getVideos(): void {
     this.heroes = this.videosService.getVideosByCategory();
+  }
+
+  getCategories(): void {
+    this.heroes = this.categoriesService.getCategories();
   }
 }
