@@ -7,7 +7,7 @@ export class VideosService {
     constructor(private http: HttpClient) {
     }
 
-    getVideosByCategory() : void {
+    getVideosByCategory() : any {
 
     this.http.get<any>('https://api.vimeo.com/'+ 'categories/' + 'sports' + '/videos?per_page=12', {
     headers:
