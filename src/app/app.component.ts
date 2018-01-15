@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CategoriesService } from '../app/core/videos/categories.service';
-import { VideosService } from '../app/core/categories/videos.service';
+import { CategoriesService } from '../app/core/categories/categories.service';
+import { VideosService } from '../app/core/videos/videos.service';
 
 
 @Component({
@@ -38,7 +38,8 @@ export class AppComponent implements OnInit{
   // }
   //
 
-  heroes: {};
+  videos: {};
+  categories: {};
 
   ngOnInit (){
     this.getVideos();
@@ -46,10 +47,10 @@ export class AppComponent implements OnInit{
   }
 
   getVideos(): void {
-    this.heroes = this.videosService.getVideosByCategory();
+    this.videos = this.videosService.getVideosByCategory();
   }
 
   getCategories(): void {
-    this.heroes = this.categoriesService.getCategories();
+    this.categories = this.categoriesService.getCategories();
   }
 }

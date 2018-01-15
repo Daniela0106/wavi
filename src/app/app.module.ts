@@ -10,8 +10,8 @@ import { ProfilesComponent } from '../app/Profiles/profiles.component';
 import { FooterComponent } from '../app/shared/footer/footer.component';
 import { NavBarComponent } from '../app/shared/navbar/nav-bar.component';
 
-import { VideosService } from '../app/core/categories/videos.service';
-import { CategoriesService } from '../app/core/videos/categories.service';
+import { VideosService } from '../app/core/videos/videos.service';
+import { CategoriesService } from '../app/core/categories/categories.service';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
