@@ -1,10 +1,17 @@
 <ul class="topnav">
   <li><img width="50px" alt="Wavi Logo" src="../assets/images/logo.png"></li>
-  <li><a href="#news" i18n="Noticias">News</a></li>
-  <li><a href="#contact" i18n="Contacto">Contact</a></li>
+  <li>    <div class="dropdown">
+    <a>Categories</a>
+    <div class="dropdown-content">
+      <p>Hello World!</p>
+      <p>Hello World!</p>
+    </div>
+  </div></li>
   <li class="right">
+    <a>About</a>
     <button (click)="switchLanguage('en')">EN</button>
     <button (click)="switchLanguage('fr')">FR</button>
     <button (click)="switchLanguage('es')">ES</button>
   </li>
 </ul>
+

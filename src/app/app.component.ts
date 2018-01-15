@@ -52,5 +52,7 @@ export class AppComponent implements OnInit{
 
   getCategories(): void {
     this.categories = this.categoriesService.getCategories();
+    console.log('Categories from app component: ', this.categories);
   }
+
 }

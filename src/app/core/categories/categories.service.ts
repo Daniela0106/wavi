@@ -1,5 +1,6 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class CategoriesService {
@@ -7,7 +8,7 @@ export class CategoriesService {
   constructor(private http:HttpClient) {
   }
 
-  getCategories():any {
+  getCategories(): Observable <any>{
 
     return this.http.get<any>('https://api.vimeo.com/' + 'categories', {
       headers: new HttpHeaders()
