@@ -24,7 +24,6 @@ export class CategoriesService {
                         categories.push(categoryName);
                     }
                 }
-                console.log('Categories names: ', categories);
                 return categories
             }
         );

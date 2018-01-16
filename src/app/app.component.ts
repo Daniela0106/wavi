@@ -29,7 +29,6 @@ export class AppComponent implements OnInit{
 
   getCategories(): void {
     this.categoriesService.getCategories().subscribe(data=>{this.categories = data});
-    console.log('Categories from app component: ', this.categories);
   }
 
 }

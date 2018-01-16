@@ -1,6 +1,6 @@
 ul.topnav {
   @media (min-width: 767px){
-    li, a {
+    li, a, button {
       height: 50px;
     }
   }
@@ -14,25 +14,31 @@ ul.topnav {
 
 ul.topnav li {float: left;}
 
-ul.topnav li a {
+ul.topnav li a, button {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 18px;
   text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #d82361;}
+ul.topnav li a, button:hover:not(.active) {background-color: #d82361;}
 
-ul.topnav li a.active, button {background-color: #d82361;}
+ul.topnav li a.active, button.active {background-color: #d82361;}
 
-ul.topnav li.right {float: right;}
+ul.topnav li.right {float: right; display: inline-flex;}
 
 @media screen and (max-width: 600px){
   ul.topnav li.right,
   ul.topnav li {float: none;}
 }
 
+button {
+  background-color: transparent;
+  border: transparent;
+}
 button:active {background-color: white; color: black;}
 button:focus {outline:0;}
 

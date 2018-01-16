@@ -1,9 +1,7 @@
 <ul class="topnav">
   <li><img width="50px" alt="Wavi Logo" src="../assets/images/logo.png"></li>
-  <!--<li><a>animation</a></li>-->
   <li *ngFor="let category of categories; trackBy: index">
-    <a class="category-item">{{category}}</a></li>
-  <!--<li><a href="#contact" i18nf="#ntacto">art</a></li>-->
+    <button class="category-item" (click)="myMethod()">{{category}}</button></li>
   <li class="right">
     <button (click)="switchLanguage('en')">EN</button>
     <button (click)="switchLanguage('fr')">FR</button>
