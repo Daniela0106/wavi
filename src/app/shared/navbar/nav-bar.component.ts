@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {Observable} from 'rxjs/Observable';
 
@@ -10,6 +10,7 @@ import {Observable} from 'rxjs/Observable';
 
 export class NavBarComponent implements OnInit {
 
+  @Input() categories: any[];
   private data: Observable<Array<number>>;
   private values: Array<number> = [];
 
@@ -21,6 +22,8 @@ export class NavBarComponent implements OnInit {
     this.translate.use(language);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.categories);
+  }
 
 }
