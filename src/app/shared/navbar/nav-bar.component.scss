@@ -14,7 +14,7 @@ ul.topnav {
 
 ul.topnav li {float: left;}
 
-ul.topnav li a, button {
+ul.topnav li a, button:not(.language) {
   display: block;
   color: white;
   text-align: center;
@@ -35,7 +35,7 @@ ul.topnav li.right {float: right; display: inline-flex;}
   ul.topnav li {float: none;}
 }
 
-button {
+button:not(.language) {
   background-color: transparent;
   border: transparent;
 }
